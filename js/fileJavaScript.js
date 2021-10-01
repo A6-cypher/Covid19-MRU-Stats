@@ -10,7 +10,7 @@
 //     console.log("AAAAAAAAAAAAAAAAAAA!")
 // }
 
-// setTimeout(scream,2000);
+
 
 function getData(){
     const API_ENDPOINT = "https://pomber.github.io/covid19/timeseries.json";
@@ -25,7 +25,8 @@ function error(err){
 }
 
 function processData(data){
-   extractMRUData(data);
+    document.querySelector(".loader").style.display = "none";
+    extractMRUData(data);
 }
 
 function extractMRUData(data){
